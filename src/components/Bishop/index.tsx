@@ -6,8 +6,10 @@ type BishopProps = {
   player: string;
 };
 
+const handleClick = () => {};
+
 const Piece: FC<BishopProps> = ({ player }) => {
-  return <Bishop className={player} style={{}} />;
+  return <Bishop className={player} onCLick={() => handleClick()} />;
 };
 
 export default Piece;

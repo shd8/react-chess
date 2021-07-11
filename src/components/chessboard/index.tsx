@@ -15,8 +15,6 @@ const Chessboard = () => {
   //TODO: toggle in outside component with two way data binding
   // for size value, lines 17 to 28 in outside component
 
-  //TODO: refactor theader and tfooter with map
-
   const handleRange = (event: any) => {
     setSize(event.target.value);
   };
@@ -42,30 +40,13 @@ const Chessboard = () => {
         <thead>
           <tr>
             <th></th>
-            <th>
-              <span>h</span>
-            </th>
-            <th>
-              <span>g</span>
-            </th>
-            <th>
-              <span>f</span>
-            </th>
-            <th>
-              <span>e</span>
-            </th>
-            <th>
-              <span>d</span>
-            </th>
-            <th>
-              <span>c</span>
-            </th>
-            <th>
-              <span>b</span>
-            </th>
-            <th>
-              <span>a</span>
-            </th>
+            {columns.reverse().map((column) => {
+              return (
+                <th>
+                  <span>{column}</span>
+                </th>
+              );
+            })}
             <th></th>
           </tr>
         </thead>
@@ -128,30 +109,13 @@ const Chessboard = () => {
         <tfoot>
           <tr>
             <th></th>
-            <th>
-              <span>a</span>
-            </th>
-            <th>
-              <span>b</span>
-            </th>
-            <th>
-              <span>c</span>
-            </th>
-            <th>
-              <span>d</span>
-            </th>
-            <th>
-              <span>e</span>
-            </th>
-            <th>
-              <span>f</span>
-            </th>
-            <th>
-              <span>g</span>
-            </th>
-            <th>
-              <span>h</span>
-            </th>
+            {columns.reverse().map((column) => {
+              return (
+                <th>
+                  <span>{column}</span>
+                </th>
+              );
+            })}
             <th></th>
           </tr>
         </tfoot>
