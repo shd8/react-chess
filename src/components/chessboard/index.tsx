@@ -1,6 +1,11 @@
 import "./style.scss";
 import { useState } from "react";
-import Piece from "../piece/";
+import Pawn from "../Pawn/";
+import Queen from "../Queen";
+import King from "../King";
+import Rook from "../Rook";
+import Knight from "../Knight";
+import Bishop from "../Bishop";
 
 const Chessboard = () => {
   const [size, setSize] = useState(50);
@@ -9,13 +14,15 @@ const Chessboard = () => {
 
   //TODO: toggle in outside component with two way data binding
   // for size value, lines 17 to 28 in outside component
+
+  //TODO: refactor theader and tfooter with map
+
   const handleRange = (event: any) => {
     setSize(event.target.value);
   };
 
   return (
     <>
-      <Piece type="pawn" />
       <div className="size-range">
         <input
           type="range"
@@ -70,7 +77,46 @@ const Chessboard = () => {
                   <span>{row}</span>
                 </th>
                 {columns.map((column) => {
-                  return <td id={column + row} className="square"></td>;
+                  return (
+                    <td id={column + row} className="square">
+                      {row === "7" ? <Pawn player="black" /> : ""}
+                      {row === "2" ? <Pawn player="white" /> : ""}
+                      {column + row === "d1" ? <Queen player="white" /> : ""}
+                      {column + row === "d8" ? <Queen player="black" /> : ""}
+                      {column + row === "e1" ? <King player="white" /> : ""}
+                      {column + row === "e8" ? <King player="black" /> : ""}
+                      {column + row === "a1" || column + row === "h1" ? (
+                        <Rook player="white" />
+                      ) : (
+                        ""
+                      )}
+                      {column + row === "a8" || column + row === "h8" ? (
+                        <Rook player="black" />
+                      ) : (
+                        ""
+                      )}
+                      {column + row === "b1" || column + row === "g1" ? (
+                        <Knight player="white" />
+                      ) : (
+                        ""
+                      )}
+                      {column + row === "b8" || column + row === "g8" ? (
+                        <Knight player="black" />
+                      ) : (
+                        ""
+                      )}
+                      {column + row === "c1" || column + row === "f1" ? (
+                        <Bishop player="white" />
+                      ) : (
+                        ""
+                      )}
+                      {column + row === "c8" || column + row === "f8" ? (
+                        <Bishop player="black" />
+                      ) : (
+                        ""
+                      )}
+                    </td>
+                  );
                 })}
                 <th>
                   <span>{row}</span>

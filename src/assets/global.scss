@@ -1,9 +1,15 @@
 .white {
   color: blue;
-  width: inherit;
+  position: absolute;
 }
 
 .black {
   color: red;
-  width: inherit;
+  position: absolute;
+}
+
+.piece {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

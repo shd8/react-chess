@@ -7,11 +7,7 @@ type BishopProps = {
 };
 
 const Piece: FC<BishopProps> = ({ player }) => {
-  return (
-    <>
-      <Bishop className={player} />
-    </>
-  );
+  return <Bishop className={player} style={{}} />;
 };
 
 export default Piece;
