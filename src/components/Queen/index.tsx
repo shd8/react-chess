@@ -1,5 +1,6 @@
 import { FC } from "react";
 import "../../assets/global.scss";
+import "./style.scss";
 import { ReactComponent as Queen } from "../../assets/queen.svg";
 
 type QueenProps = {
@@ -9,7 +10,7 @@ type QueenProps = {
 const Piece: FC<QueenProps> = ({ player }) => {
   return (
     <>
-      <Queen className={player} />
+      <Queen className={`${player} queen`} />
     </>
   );
 };

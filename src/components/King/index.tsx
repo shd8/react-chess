@@ -1,5 +1,6 @@
 import { FC } from "react";
 import "../../assets/global.scss";
+import "./style.scss";
 import { ReactComponent as King } from "../../assets/king.svg";
 
 type KingProps = {
@@ -9,7 +10,7 @@ type KingProps = {
 const Piece: FC<KingProps> = ({ player }) => {
   return (
     <>
-      <King className={player} />
+      <King className={`${player} king`} />
     </>
   );
 };

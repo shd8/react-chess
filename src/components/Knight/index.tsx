@@ -1,5 +1,6 @@
 import { FC } from "react";
 import "../../assets/global.scss";
+import "./style.scss";
 import { ReactComponent as Knight } from "../../assets/knight.svg";
 
 type KnightProps = {
@@ -9,7 +10,7 @@ type KnightProps = {
 const Piece: FC<KnightProps> = ({ player }) => {
   return (
     <>
-      <Knight className={player} />
+      <Knight className={`${player} knight`} />
     </>
   );
 };
