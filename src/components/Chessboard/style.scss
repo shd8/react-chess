@@ -61,6 +61,17 @@ tbody tr:nth-child(even) .square:nth-child(odd) {
   min-width: 70vmin;
 }
 
+.top-left-corner,
+.bottom-right-corner {
+  border-radius: 1em 0em 0em 0em;
+}
+
+.top-right-corner,
+.bottom-left-corner {
+  border-radius: 0em 0em 0em 1em;
+}
+
+
 @media (max-width: 400px) {
   .board {
     min-height: 95vmin;

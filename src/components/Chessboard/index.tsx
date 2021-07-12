@@ -39,7 +39,7 @@ const Chessboard = () => {
       >
         <thead>
           <tr>
-            <th></th>
+            <th className="top-right-corner"></th>
             {columns.reverse().map((column) => {
               return (
                 <th>
@@ -47,7 +47,7 @@ const Chessboard = () => {
                 </th>
               );
             })}
-            <th></th>
+            <th className="top-left-corner"></th>
           </tr>
         </thead>
         <tbody>
@@ -108,7 +108,7 @@ const Chessboard = () => {
         </tbody>
         <tfoot>
           <tr>
-            <th></th>
+            <th className="bottom-left-corner"></th>
             {columns.reverse().map((column) => {
               return (
                 <th>
@@ -116,7 +116,7 @@ const Chessboard = () => {
                 </th>
               );
             })}
-            <th></th>
+            <th className="bottom-right-corner"></th>
           </tr>
         </tfoot>
       </table>
