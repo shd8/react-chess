@@ -8,9 +8,12 @@ import Knight from "../Knight";
 import Bishop from "../Bishop";
 
 const Chessboard = () => {
+  const ROWS = ["8", "7", "6", "5", "4", "3", "2", "1"];
+  const COLUMNS = ["a", "b", "c", "d", "e", "f", "g", "h"];
+  const THEMES = ["marble", "wood", "glass"];
+
   const [size, setSize] = useState(50);
-  const rows = ["8", "7", "6", "5", "4", "3", "2", "1"];
-  const columns = ["a", "b", "c", "d", "e", "f", "g", "h"];
+  const [theme, setTheme] = useState(THEMES[0]);
 
   //TODO: toggle in outside component with two way data binding
   // for size value, lines 17 to 28 in outside component
@@ -19,8 +22,26 @@ const Chessboard = () => {
     setSize(event.target.value);
   };
 
+  const handlePickTheme = (theme: string) => {
+    setTheme(theme);
+  };
+
   return (
     <>
+      <div className="color-picker">
+        <h2>Color picker</h2>
+        <ul>
+          {THEMES.map((THEME) => {
+            return (
+              <li key={THEME} onClick={() => handlePickTheme(THEME)}>
+                <p>{THEME}</p>
+                <div className={`${THEME}-picker`}></div>
+              </li>
+            );
+          })}
+        </ul>
+        <p>Actual: {theme}</p>
+      </div>
       <div className="size-range">
         <p className="size-number">{size}</p>
         <input
@@ -40,7 +61,7 @@ const Chessboard = () => {
         <thead>
           <tr>
             <th className="top-right-corner"></th>
-            {columns.reverse().map((column) => {
+            {COLUMNS.reverse().map((column) => {
               return (
                 <th>
                   <span>{column}</span>
@@ -50,16 +71,16 @@ const Chessboard = () => {
             <th className="top-left-corner"></th>
           </tr>
         </thead>
-        <tbody>
-          {rows.map((row) => {
+        <tbody className={`table-body-${theme}`}>
+          {ROWS.map((row) => {
             return (
               <tr>
                 <th>
                   <span>{row}</span>
                 </th>
-                {columns.map((column) => {
+                {COLUMNS.map((column) => {
                   return (
-                    <td id={column + row} className="square">
+                    <td id={column + row} className={`square square-${theme}`}>
                       {row === "7" ? <Pawn player="black" /> : ""}
                       {row === "2" ? <Pawn player="white" /> : ""}
                       {column + row === "d1" ? <Queen player="white" /> : ""}
@@ -109,7 +130,7 @@ const Chessboard = () => {
         <tfoot>
           <tr>
             <th className="bottom-left-corner"></th>
-            {columns.reverse().map((column) => {
+            {COLUMNS.reverse().map((column) => {
               return (
                 <th>
                   <span>{column}</span>

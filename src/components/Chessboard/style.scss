@@ -34,17 +34,37 @@ thead, th:last-child {
   transform: rotateZ(180deg);
 }
 
-tbody tr:nth-child(odd) .square:nth-child(even),
-tbody tr:nth-child(even) .square:nth-child(odd) {
-  background-image: url('https://i.ibb.co/xSQq1cb/marble-white.png');
-}
-
 .square {
-  background-image: url('https://i.ibb.co/GkNggHb/marble-black.png');
-
   svg {
     transform: translateX(-50%);
   }
+}
+
+.square-marble {
+  background-image: url('https://i.ibb.co/GkNggHb/marble-black.png');
+}
+
+.table-body-marble tr:nth-child(odd) .square:nth-child(even),
+.table-body-marble tr:nth-child(even) .square:nth-child(odd) {
+  background-image: url('https://i.ibb.co/xSQq1cb/marble-white.png');
+}
+
+.square-wood {
+  background-image: url('https://i.ibb.co/GkNggHb/marble-black.png');
+}
+
+.table-body-wood tr:nth-child(odd) .square:nth-child(even),
+.table-body-wood tr:nth-child(even) .square:nth-child(odd) {
+  background-image: url('https://i.ibb.co/xSQq1cb/marble-white.png');
+}
+
+.square-glass {
+  background-image: url('https://i.ibb.co/GkNggHb/marble-black.png');
+}
+
+.table-body-glass tr:nth-child(odd) .square:nth-child(even),
+.table-body-glass tr:nth-child(even) .square:nth-child(odd) {
+  background-image: url('https://i.ibb.co/xSQq1cb/marble-white.png');
 }
 
 .size-range {
@@ -71,6 +91,38 @@ tbody tr:nth-child(even) .square:nth-child(odd) {
   border-radius: 0em 0em 0em 1em;
 }
 
+.color-picker {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+
+  ul {
+    display: flex;
+  }
+}
+
+.marble-picker,
+.wood-picker,
+.glass-picker {
+  width: 2em;
+  height: 2em;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+
+.marble-picker {
+  background: url('https://media.bahag.cloud/m/484660/12.jpg');
+}
+
+.wood-picker {
+  margin: 0em 3em;
+  background: url('https://i.ibb.co/bvMZqx4/wood.jpg');
+}
+
+.glass-picker {
+  background-color: rgba(42, 139, 168, 0.5);
+}
 
 @media (max-width: 400px) {
   .board {
