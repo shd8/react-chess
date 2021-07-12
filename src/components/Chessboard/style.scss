@@ -1,9 +1,10 @@
-p, h1 {
-  font-family: "Quattrocento Sans", Arial, sans-serif;
-}
-
 h1 {
   font-size: 2em;
+  padding: 1em;
+}
+
+table {
+  margin-bottom: 5em;
 }
 
 td {
@@ -26,7 +27,8 @@ span {
   height: 100%;
   align-items: center;
   justify-content: center;
-  font-size: 0.5em;
+  font-size: 2vmin;
+  color: black;
 }
 
 thead, th:last-child {
@@ -35,11 +37,11 @@ thead, th:last-child {
 
 tbody tr:nth-child(odd) .square:nth-child(even),
 tbody tr:nth-child(even) .square:nth-child(odd) {
-  background-color: #FFF;
+  background-image: url('https://i.ibb.co/xSQq1cb/marble-white.png');
 }
 
 .square {
-  background-color: #404040;
+  background-image: url('https://i.ibb.co/GkNggHb/marble-black.png');
 
   svg {
     transform: translateX(-50%);
@@ -47,7 +49,7 @@ tbody tr:nth-child(even) .square:nth-child(odd) {
 }
 
 .size-range {
-  padding: 1em;
+  padding-bottom: 2em;
 }
 
 .size-number {
@@ -76,7 +78,7 @@ tbody tr:nth-child(even) .square:nth-child(odd) {
 
 @media (min-width: 1200px) {
   .board {
-    min-height: 35vmin;
-    min-width: 35vmin;
+    min-height: 38.5vmin;
+    min-width: 38.5vmin;
   }
 }

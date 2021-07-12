@@ -42,11 +42,16 @@ table {
 	border-spacing: 0;
 }
 
+html {
+	background-image: url('https://i.ibb.co/MCrNwM2/marble-background.png');
+	background-size: cover;
+}
 
 .App {
-  font-family: sans-serif;
+	font-family: "Quattrocento Sans", Arial, sans-serif;
   text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
+	align-items: center;
+	color: white;
 }
