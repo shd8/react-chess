@@ -28,8 +28,8 @@ const Chessboard = () => {
 
   return (
     <>
-      <div className="color-picker">
-        <h2>Color picker</h2>
+      <div className="theme-picker">
+        <h2>Theme picker</h2>
         <ul>
           {THEMES.map((THEME) => {
             return (
@@ -40,7 +40,6 @@ const Chessboard = () => {
             );
           })}
         </ul>
-        <p>Actual: {theme}</p>
       </div>
       <div className="size-range">
         <p className="size-number">{size}</p>

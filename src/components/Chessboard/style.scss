@@ -50,21 +50,29 @@ thead, th:last-child {
 }
 
 .square-wood {
-  background-image: url('https://i.ibb.co/GkNggHb/marble-black.png');
+  background-image: url('https://i.ibb.co/5K9XtCp/Dark-wood-background-brown-color-Close-up-of-wall-made-of-wooden-planks.jpg');
 }
 
 .table-body-wood tr:nth-child(odd) .square:nth-child(even),
 .table-body-wood tr:nth-child(even) .square:nth-child(odd) {
-  background-image: url('https://i.ibb.co/xSQq1cb/marble-white.png');
+  background-image: url('https://i.ibb.co/Hnfkz15/white-wood.jpg');
 }
 
 .square-glass {
-  background-image: url('https://i.ibb.co/GkNggHb/marble-black.png');
+  background: rgba( 4, 4, 4, 0.50 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 9.5px );
+  -webkit-backdrop-filter: blur( 9.5px );
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 .table-body-glass tr:nth-child(odd) .square:nth-child(even),
 .table-body-glass tr:nth-child(even) .square:nth-child(odd) {
-  background-image: url('https://i.ibb.co/xSQq1cb/marble-white.png');
+  background: rgba( 255, 255, 255, 0.35 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 4.0px );
+  -webkit-backdrop-filter: blur( 4.0px );
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 .size-range {
@@ -91,14 +99,30 @@ thead, th:last-child {
   border-radius: 0em 0em 0em 1em;
 }
 
-.color-picker {
+.theme-picker {
   display: flex;
   flex-direction: column;
   width: 100%;
   align-items: center;
+  padding-bottom: 1em;
+
+  h2 {
+    padding-bottom: 1em;
+  }
 
   ul {
     display: flex;
+  }
+
+  li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  p {
+    padding-bottom: 0.5em;
+    text-transform: capitalize;
   }
 }
 
