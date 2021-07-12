@@ -1,5 +1,5 @@
 import "./styles.scss";
-import Chessboard from "./components/chessboard";
+import Chessboard from "./components/Chessboard";
 
 export default function App() {
   return (

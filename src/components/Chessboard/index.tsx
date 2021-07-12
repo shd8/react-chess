@@ -22,6 +22,7 @@ const Chessboard = () => {
   return (
     <>
       <div className="size-range">
+        <p className="size-number">{size}</p>
         <input
           type="range"
           name="size"
@@ -32,7 +33,6 @@ const Chessboard = () => {
           onChange={(event) => handleRange(event)}
         />
       </div>
-      <p>{size}</p>
       <table
         className="board"
         style={{ width: size + "vmin", height: size + "vmin" }}
