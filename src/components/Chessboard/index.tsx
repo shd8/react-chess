@@ -80,39 +80,63 @@ const Chessboard = () => {
                 {COLUMNS.map((column) => {
                   return (
                     <td id={column + row} className={`square square-${theme}`}>
-                      {row === "7" ? <Pawn player="black" /> : ""}
-                      {row === "2" ? <Pawn player="white" /> : ""}
-                      {column + row === "d1" ? <Queen player="white" /> : ""}
-                      {column + row === "d8" ? <Queen player="black" /> : ""}
-                      {column + row === "e1" ? <King player="white" /> : ""}
-                      {column + row === "e8" ? <King player="black" /> : ""}
+                      {row === "7" ? (
+                        <Pawn player={`black black-${theme}`} />
+                      ) : (
+                        ""
+                      )}
+                      {row === "2" ? (
+                        <Pawn player={`white white-${theme}`} />
+                      ) : (
+                        ""
+                      )}
+                      {column + row === "d1" ? (
+                        <Queen player={`white white-${theme}`} />
+                      ) : (
+                        ""
+                      )}
+                      {column + row === "d8" ? (
+                        <Queen player={`black black-${theme}`} />
+                      ) : (
+                        ""
+                      )}
+                      {column + row === "e1" ? (
+                        <King player={`white white-${theme}`} />
+                      ) : (
+                        ""
+                      )}
+                      {column + row === "e8" ? (
+                        <King player={`black black-${theme}`} />
+                      ) : (
+                        ""
+                      )}
                       {column + row === "a1" || column + row === "h1" ? (
-                        <Rook player="white" />
+                        <Rook player={`white white-${theme}`} />
                       ) : (
                         ""
                       )}
                       {column + row === "a8" || column + row === "h8" ? (
-                        <Rook player="black" />
+                        <Rook player={`black black-${theme}`} />
                       ) : (
                         ""
                       )}
                       {column + row === "b1" || column + row === "g1" ? (
-                        <Knight player="white" />
+                        <Knight player={`white white-${theme}`} />
                       ) : (
                         ""
                       )}
                       {column + row === "b8" || column + row === "g8" ? (
-                        <Knight player="black" />
+                        <Knight player={`black black-${theme}`} />
                       ) : (
                         ""
                       )}
                       {column + row === "c1" || column + row === "f1" ? (
-                        <Bishop player="white" />
+                        <Bishop player={`white white-${theme}`} />
                       ) : (
                         ""
                       )}
                       {column + row === "c8" || column + row === "f8" ? (
-                        <Bishop player="black" />
+                        <Bishop player={`black black-${theme}`} />
                       ) : (
                         ""
                       )}
