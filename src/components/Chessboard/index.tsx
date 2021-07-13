@@ -59,22 +59,22 @@ const Chessboard = () => {
       >
         <thead>
           <tr>
-            <th className="top-right-corner"></th>
+            <th className={`top-right-corner frame-${theme}`}></th>
             {COLUMNS.reverse().map((column) => {
               return (
-                <th>
+                <th className={`frame-${theme}`}>
                   <span>{column}</span>
                 </th>
               );
             })}
-            <th className="top-left-corner"></th>
+            <th className={`top-left-corner frame-${theme}`}></th>
           </tr>
         </thead>
         <tbody className={`table-body-${theme}`}>
           {ROWS.map((row) => {
             return (
               <tr>
-                <th>
+                <th className={`frame-${theme}`}>
                   <span>{row}</span>
                 </th>
                 {COLUMNS.map((column) => {
@@ -119,7 +119,7 @@ const Chessboard = () => {
                     </td>
                   );
                 })}
-                <th>
+                <th className={`frame-${theme}`}>
                   <span>{row}</span>
                 </th>
               </tr>
@@ -128,15 +128,15 @@ const Chessboard = () => {
         </tbody>
         <tfoot>
           <tr>
-            <th className="bottom-left-corner"></th>
+            <th className={`bottom-left-corner frame-${theme}`}></th>
             {COLUMNS.reverse().map((column) => {
               return (
-                <th>
+                <th className={`frame-${theme}`}>
                   <span>{column}</span>
                 </th>
               );
             })}
-            <th className="bottom-right-corner"></th>
+            <th className={`bottom-right-corner frame-${theme}`}></th>
           </tr>
         </tfoot>
       </table>
