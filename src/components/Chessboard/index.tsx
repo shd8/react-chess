@@ -15,9 +15,6 @@ const Chessboard = () => {
   const [size, setSize] = useState(50);
   const [theme, setTheme] = useState(THEMES[0]);
 
-  //TODO: toggle in outside component with two way data binding
-  // for size value, lines 17 to 28 in outside component
-
   const handleRange = (event: any) => {
     setSize(event.target.value);
   };
