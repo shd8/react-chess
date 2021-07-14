@@ -6,12 +6,9 @@ import King from "../King";
 import Rook from "../Rook";
 import Knight from "../Knight";
 import Bishop from "../Bishop";
+import { ROWS, COLUMNS, THEMES } from "../../constants";
 
 const Chessboard = () => {
-  const ROWS = ["8", "7", "6", "5", "4", "3", "2", "1"];
-  const COLUMNS = ["a", "b", "c", "d", "e", "f", "g", "h"];
-  const THEMES = ["marble", "wood", "glass"];
-
   const [size, setSize] = useState(50);
   const [theme, setTheme] = useState(THEMES[0]);
 
