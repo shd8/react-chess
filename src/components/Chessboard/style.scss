@@ -174,6 +174,11 @@ thead, th:last-child {
   height: 2em;
   border: 1px solid black;
   border-radius: 50%;
+  border: 3px solid transparent;
+
+  &:hover {
+    border: 3px solid white;
+  }
 }
 
 .marble-picker {
