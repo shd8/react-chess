@@ -78,6 +78,7 @@ thead, th:last-child {
 .square {
   svg {
     transform: translateX(-50%);
+    cursor: pointer;
   }
 }
 
@@ -175,6 +176,7 @@ thead, th:last-child {
   border: 1px solid black;
   border-radius: 50%;
   border: 3px solid transparent;
+  cursor: pointer;
 
   &:hover {
     border: 3px solid white;
