@@ -10,7 +10,7 @@ type KnightProps = {
 const Piece: FC<KnightProps> = ({ player }) => {
   return (
     <>
-      <Knight className={`${player} knight`} />
+      <Knight className={`${player} knight`} id="knight" />
     </>
   );
 };

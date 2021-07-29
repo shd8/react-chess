@@ -10,7 +10,7 @@ type QueenProps = {
 const Piece: FC<QueenProps> = ({ player }) => {
   return (
     <>
-      <Queen className={`${player} queen`} />
+      <Queen className={`${player} queen`} id="queen" />
     </>
   );
 };

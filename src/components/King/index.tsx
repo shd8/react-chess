@@ -10,7 +10,7 @@ type KingProps = {
 const Piece: FC<KingProps> = ({ player }) => {
   return (
     <>
-      <King className={`${player} king`} />
+      <King className={`${player} king`} id="king" />
     </>
   );
 };
